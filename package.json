@@ -1,10 +1,10 @@
 {
   "name": "nconf-dir",
   "version": "0.0.1",
-  "description": "",
+  "description": "A nconf storage that provide the configuration be located in files with dir that build the namespaces",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/.bin/mocha tests/**"
   },
   "keywords": [
     "nconf",
@@ -12,11 +12,23 @@
     "config"
   ],
   "author": "5Minds IT-Solutions GmbH & Co. KG <developers@5minds.de>",
+  "maintainers": [
+    {
+      "name": "Martin Möllenbeck",
+      "email": "martin.moellenbeck@5minds.de"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5minds/nconf-dir"
+  },
   "license": "MIT",
   "dependencies": {
     "nconf": "^0.8.4"
   },
   "devDependencies": {
-    "eslint-config-5minds": "0.0.4"
+    "eslint-config-5minds": "0.0.4",
+    "mocha": "^3.1.0",
+    "should": "^11.1.0"
   }
 }
