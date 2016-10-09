@@ -4,7 +4,7 @@ const path = require('path');
 
 const nconf = require('nconf');
 
-require('./lib/nconf-dir');
+require('./lib/nconf_dir');
 
 nconf.argv()
   .env('__');
