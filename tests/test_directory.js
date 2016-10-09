@@ -16,10 +16,30 @@ describe('Nconfdir#getDirectory', () => {
     done();
   });
 
+  it('should raise an Error for getDirectory if dir didn\' exist', (done) => {
+    const nconfdir = new Nconfdir({dir: path.join(__dirname, 'configs', 'without_env'), env: 'development'});
+
+    (() => {
+      nconfdir.getDirectory();
+    }).should.throw(Error);
+
+    done();
+  });
+
   it('should getDirectory include dir without env', (done) => {
     const nconfdir = new Nconfdir({dir: path.join(__dirname, 'configs', 'env')});
 
     should(nconfdir.getDirectory()).be.equal(path.join(__dirname, 'configs', 'env'));
+
+    done();
+  });
+
+  it('should raise an Error for getDirectory if dir and env didn\' exist', (done) => {
+    const nconfdir = new Nconfdir({dir: path.join(__dirname, 'configs', 'did_exist')});
+
+    (() => {
+      nconfdir.getDirectory();
+    }).should.throw(Error);
 
     done();
   });
