@@ -9,8 +9,6 @@ require('./lib/nconf_dir');
 nconf.argv()
   .env('__');
 
-// nconf.use('http', {url: 'http://jsonplaceholder.typicode.com/posts/1'});
-
 nconf.use('Nconfdir', {dir: path.join(__dirname, 'config')});
 
 console.log(nconf.get('title'));
