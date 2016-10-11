@@ -6,7 +6,7 @@ const should = require('should');
 
 const DirScanner = require('./../../lib/dir_scanner');
 
-describe('DirScanner', () => {
+describe('DirScanner#scann() -> simpleStore', () => {
 
   it('should create a simple store', (done) => {
     const dirname = path.join(__dirname, '..', 'configs', 'without_env');
