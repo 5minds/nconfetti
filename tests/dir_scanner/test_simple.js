@@ -15,7 +15,13 @@ describe('DirScanner#scann() -> simpleStore', () => {
 
     const store = dirScanner.scann(dirname);
 
-    should(store).be.deepEqual({entry: 'a sample entry'});
+    const expectedStore = {
+      simple_config: {
+        entry: 'a sample entry',
+      },
+    };
+
+    should(store).be.deepEqual(expectedStore);
 
     done();
   });

@@ -16,9 +16,13 @@ describe('DirScanner#scann() -> complexStore', () => {
     const store = dirScanner.scann(dirname);
 
     const expectedStore = {
-      development_config: 'A Entry',
+      development_config: {
+        development_config: 'A Entry',
+      },
       sub_folder: {
-        sub: 'A sub entry',
+        sub_folder_config: {
+          sub: 'A sub entry',
+        },
       },
     };
 
