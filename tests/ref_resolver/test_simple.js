@@ -11,7 +11,8 @@ describe('RefResolver', () => {
   it('should resolve refs in schema synchronous', () => {
     const resolvedSchema = refResolver(schema);
 
-    should(resolvedSchema.string).eql('string');
+    should(resolvedSchema.string)
+      .eql('string');
   });
 
 });
