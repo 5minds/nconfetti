@@ -1,0 +1,10 @@
+{
+  "requiredString": {
+      "title": "requiredString",
+      "type": "string",
+      "minLength": 1
+  },
+  "string": {
+    "$ref": "#/requiredString/type"
+  }
+}
