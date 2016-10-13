@@ -1,0 +1,8 @@
+{
+  "requiredString": {
+      "title": "requiredString",
+      "type": "string",
+      "minLength": 1
+  },
+  "string": "string"
+}
