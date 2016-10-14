@@ -9,12 +9,8 @@ require('./lib/nconf_dir');
 nconf.argv()
   .env('__');
 
-nconf.use('Nconfdir', {dir: path.join(__dirname, 'config')});
+nconf.use('Nconfdir', {dir: path.join(__dirname, 'tests', 'configs', 'env'), env: 'development'});
 
-console.log(nconf.get('title'));
+console.log(nconf.get('development_config:development_config'));
 
-console.log(nconf.get('hello'));
-console.log(nconf.get('port'));
-console.log(nconf.get('world:country'));
-console.log(nconf.get());
 
