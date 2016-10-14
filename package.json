@@ -18,6 +18,12 @@
       "email": "martin.moellenbeck@5minds.de"
     }
   ],
+  "contributors": [
+    {
+      "name": "Sebastian Meier",
+      "email": "sebastian.meier@5minds.de"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/5minds/nconf-dir"
