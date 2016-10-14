@@ -9,11 +9,19 @@ names of the folder where the files are located.
 ```javascript
 'use strict';
 
-const path = reqiure('path');
+const path = require('path');
 
 const nconf = require('nconf');
-require('nconf-dir');
+require('./lib/nconf_dir');
+
+const dir = path.join(__dirname, 'tests', 'configs', 'env');
 
 nconf.argv()
   .env('__');
+
+nconf.use('Nconfdir', {dir: dir, env: process.env.NODE_ENV});
+
+console.log(nconf.get('development_config:development_config'));
+
+
 ```

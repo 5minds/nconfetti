@@ -1,0 +1,6 @@
+{
+    "config_key": "A config key",
+    "entry_with_ref": {
+        "$ref": "#/root/entry"
+    }
+}
