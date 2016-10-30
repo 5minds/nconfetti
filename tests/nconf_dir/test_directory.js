@@ -6,6 +6,9 @@ const should = require('should');
 
 const Nconfdir = require('./../../index.js');
 
+/* only to check the _getDirectory function */
+/* eslint no-underscore-dangle: "allow" */
+
 describe('Nconfdir#getDirectory', () => {
 
   it('should getDirectory include dir and expanded env', (done) => {
@@ -20,7 +23,7 @@ describe('Nconfdir#getDirectory', () => {
     const nconfdir = new Nconfdir({dir: path.join(__dirname, '..', 'configs', 'without_env'), env: 'development'});
 
     (() => {
-      nconfdir.getDirectory();
+      nconfdir._getDirectory();
     }).should.throw(Error);
 
     done();
