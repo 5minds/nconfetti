@@ -4,16 +4,14 @@ const path = require('path');
 
 const should = require('should');
 
-const DirScanner = require('./../../lib/dir_scanner');
+const dirScanner = require('./../../lib/dir_scanner');
 
 describe('DirScanner#scann() -> simpleStore', () => {
 
   it('should create a simple store', (done) => {
     const dirname = path.join(__dirname, '..', 'configs', 'without_env');
 
-    const dirScanner = new DirScanner();
-
-    const store = dirScanner.scann(dirname);
+    const store = dirScanner(dirname);
 
     const expectedStore = {
       simple_config: {
