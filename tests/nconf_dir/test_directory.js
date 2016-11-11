@@ -14,7 +14,7 @@ describe('Nconfdir#getDirectory', () => {
   it('should getDirectory include dir and expanded env', (done) => {
     const nconfdir = new Nconfdir({dir: path.join(__dirname, '..', 'configs', 'env'), env: 'development'});
 
-    should(nconfdir.getDirectory()).be.equal(path.join(__dirname, '..', 'configs', 'env', 'development'));
+    should(nconfdir._getDirectory()).be.equal(path.join(__dirname, '..', 'configs', 'env', 'development'));
 
     done();
   });
@@ -32,7 +32,7 @@ describe('Nconfdir#getDirectory', () => {
   it('should getDirectory include dir without env', (done) => {
     const nconfdir = new Nconfdir({dir: path.join(__dirname, '..', 'configs', 'env')});
 
-    should(nconfdir.getDirectory()).be.equal(path.join(__dirname, '..', 'configs', 'env'));
+    should(nconfdir._getDirectory()).be.equal(path.join(__dirname, '..', 'configs', 'env'));
 
     done();
   });
@@ -41,7 +41,7 @@ describe('Nconfdir#getDirectory', () => {
     const nconfdir = new Nconfdir({dir: path.join(__dirname, '..', 'configs', 'did_exist')});
 
     (() => {
-      nconfdir.getDirectory();
+      nconfdir._getDirectory();
     }).should.throw(Error);
 
     done();
