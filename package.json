@@ -1,6 +1,6 @@
 {
   "name": "nconfetti",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nconf storage that provide the configuration be located in files with dir that build the namespaces",
   "main": "index.js",
   "scripts": {
