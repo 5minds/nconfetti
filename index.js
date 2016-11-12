@@ -1,5 +1,5 @@
 'use strict';
 
-const Nconfdir = require('./lib/nconf_dir');
+const Nconfetti = require('./lib/nconfetti');
 
-module.exports = Nconfdir;
+module.exports = Nconfetti;

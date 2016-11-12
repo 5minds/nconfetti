@@ -4,14 +4,14 @@ const path = require('path');
 
 const should = require('should');
 
-const Nconfdir = require('./../../index.js');
+const Nconfetti = require('./../../index.js');
 
-describe('Nconfdir#loadSync', () => {
+describe('Nconfetti#loadSync', () => {
 
   it('should loadSync all config files of given directory', (done) => {
-    const nconfdir = new Nconfdir({dir: path.join(__dirname, '..', 'configs', 'env'), env: 'development'});
+    const nconfetti = new Nconfetti({path: path.join(__dirname, '..', 'configs', 'env'), env: 'development'});
 
-    const config = nconfdir.loadSync();
+    const config = nconfetti.loadSync();
 
     const expectedConfig = {
       development_config: {
