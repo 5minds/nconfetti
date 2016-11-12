@@ -1,3 +1,3 @@
-# 1.0.0 / 2016-10-14
+# 1.0.0 / 2016-11-12
 
-- First version
+- First version: That support nconf to load json config files from a directory tree
