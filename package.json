@@ -1,5 +1,5 @@
 {
-  "name": "nconf-dir",
+  "name": "nconfetti",
   "version": "1.0.0",
   "description": "A nconf storage that provide the configuration be located in files with dir that build the namespaces",
   "main": "index.js",
@@ -9,7 +9,10 @@
   "keywords": [
     "nconf",
     "dir",
-    "config"
+    "config",
+    "file",
+    "json",
+    "deref"
   ],
   "author": "5Minds IT-Solutions GmbH & Co. KG <developers@5minds.de>",
   "maintainers": [
@@ -26,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/5minds/nconf-dir"
+    "url": "https://github.com/5minds/nconfetti"
   },
   "license": "MIT",
   "files":[
