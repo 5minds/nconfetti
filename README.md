@@ -28,7 +28,7 @@ console.log(nconf.get('development_config:development_config'));
 ```
 
 After require `nconfetti` the backend will be added as storage backend
-for `nconf` and after it is `used` and configured, the values are loaded.
+for `nconf`. Then it needs to be configired with `path`and `env`.
 
 The backend support dereferencing of JSON pointers with a synchron usage
 of [json-schema-deref](https://www.npmjs.com/package/json-schema-deref)
