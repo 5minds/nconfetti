@@ -15,14 +15,25 @@ const path = require('path');
 const nconf = require('nconf');
 require('./lib/nconfetti');
 
-const dir = path.join(__dirname, 'tests', 'configs', 'env');
+const path = path.resolve(__dirname, 'tests/configs/env');
 
 nconf.argv()
   .env('__');
 
-nconf.use('Nconfetti', {dir: dir, env: process.env.NODE_ENV});
+nconf.use('Nconfetti', {path: path, env: process.env.NODE_ENV});
 
 console.log(nconf.get('development_config:development_config'));
 
 
 ```
+
+After require `nconfetti` the backend will be added as storage backend
+for `nconf`. Then it needs to be configired with `path`and `env`.
+
+The backend support dereferencing of JSON pointers with a synchron usage
+of [json-schema-deref](https://www.npmjs.com/package/json-schema-deref)
+
+## Config parameter
+
+- path: The path to load the config files from
+- env: Add the environment to the config path.
