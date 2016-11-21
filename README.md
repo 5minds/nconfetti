@@ -15,7 +15,7 @@ const path = require('path');
 const nconf = require('nconf');
 require('./lib/nconfetti');
 
-const path = path.join(__dirname, 'tests', 'configs', 'env');
+const path = path.resolve(__dirname, 'tests/configs/env');
 
 nconf.argv()
   .env('__');
