@@ -37,3 +37,5 @@ of [json-schema-deref](https://www.npmjs.com/package/json-schema-deref)
 
 - path: The path to load the config files from
 - env: Add the environment to the config path.
+- vars: A key value list of vars that will be evaluated within the config files
+ (handlebars syntax is required)
