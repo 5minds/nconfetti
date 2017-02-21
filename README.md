@@ -14,7 +14,7 @@ const path = require('path');
 
 const nconf = require('nconf');
 
-require('./../index.js'); // replace with require('nconfetti');
+require('nconfetti');
 
 nconf.argv()
   .env('__');
@@ -34,8 +34,8 @@ console.log(nconf.get('simple_config:entry'));
 
 ## Description
 
-After require `nconfetti` the backend will be added as storage backend
-for `nconf`. Then it needs to be configired with `path`and `env`.
+After requiring `nconfetti` the its storage will automagically be registered to `nconf`.
+Then it needs to be configured with `path`and `env`.
 
 The backend support dereferencing of JSON pointers with a synchron usage
 of [json-schema-deref](https://www.npmjs.com/package/json-schema-deref)
