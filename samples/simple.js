@@ -4,13 +4,11 @@ const path = require('path');
 
 const nconf = require('nconf');
 
-require('./../index.js');
+require('./../index.js'); // replace with require('nconfetti');
 
 nconf.argv()
   .env('__');
 
-nconf.use('Nconfetti', {path: path.resolve(__dirname, '../tests/configs/env'), env: 'development'});
+nconf.use('Nconfetti', {path: path.resolve(__dirname, '../tests/configs/without_env')});
 
-console.log(nconf.get('development_config:development_config'));
-
-
+console.log(nconf.get('simple_config:entry'));

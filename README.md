@@ -14,18 +14,25 @@ const path = require('path');
 
 const nconf = require('nconf');
 
-require('./../index.js'); // change it with require('nconfetti');
+require('./../index.js'); // replace with require('nconfetti');
 
 nconf.argv()
   .env('__');
 
-nconf.use('Nconfetti', {path: path.resolve(__dirname, '../tests/configs/env'), env: 'development'});
+nconf.use('Nconfetti', {path: path.resolve(__dirname, '../tests/configs/without_env')});
 
-console.log(nconf.get('development_config:development_config'));
+console.log(nconf.get('simple_config:entry'));
 ```
-See sample/simple.js
 
+## Try a sample
 
+- see sample/simple.js
+- runit with
+  - npm install
+  - node samples/simple.js
+ - have fun
+
+## Description
 
 After require `nconfetti` the backend will be added as storage backend
 for `nconf`. Then it needs to be configired with `path`and `env`.
