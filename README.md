@@ -13,19 +13,19 @@ located.
 const path = require('path');
 
 const nconf = require('nconf');
-require('./lib/nconfetti');
 
-const path = path.resolve(__dirname, 'tests/configs/env');
+require('./../index.js'); // change it with require('nconfetti');
 
 nconf.argv()
   .env('__');
 
-nconf.use('Nconfetti', {path: path, env: process.env.NODE_ENV});
+nconf.use('Nconfetti', {path: path.resolve(__dirname, '../tests/configs/env'), env: 'development'});
 
 console.log(nconf.get('development_config:development_config'));
-
-
 ```
+See sample/simple.js
+
+
 
 After require `nconfetti` the backend will be added as storage backend
 for `nconf`. Then it needs to be configired with `path`and `env`.
