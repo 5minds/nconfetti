@@ -34,7 +34,7 @@ console.log(nconf.get('simple_config:entry'));
 
 ## Description
 
-After requiring `nconfetti` the its storage will automagically be registered to `nconf`.
+After requiring `nconfetti` its storage will automagically be registered to `nconf`.
 Then it needs to be configured with `path`and `env`.
 
 The backend support dereferencing of JSON pointers with a synchronous usage
