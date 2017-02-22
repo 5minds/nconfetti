@@ -26,8 +26,8 @@ console.log(nconf.get('simple_config:entry'));
 
 ## Try a sample
 
-- see sample/simple.js
-- runit with
+- see samples/simple.js
+- run it with
   - npm install
   - node samples/simple.js
  - have fun
@@ -37,7 +37,7 @@ console.log(nconf.get('simple_config:entry'));
 After requiring `nconfetti` the its storage will automagically be registered to `nconf`.
 Then it needs to be configured with `path`and `env`.
 
-The backend support dereferencing of JSON pointers with a synchron usage
+The backend support dereferencing of JSON pointers with a synchronous usage
 of [json-schema-deref](https://www.npmjs.com/package/json-schema-deref)
 
 ## Config parameter
