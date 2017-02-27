@@ -13,24 +13,31 @@ located.
 const path = require('path');
 
 const nconf = require('nconf');
-require('./lib/nconfetti');
 
-const path = path.resolve(__dirname, 'tests/configs/env');
+require('nconfetti');
 
 nconf.argv()
   .env('__');
 
-nconf.use('Nconfetti', {path: path, env: process.env.NODE_ENV});
+nconf.use('Nconfetti', {path: path.resolve(__dirname, '../tests/configs/without_env')});
 
-console.log(nconf.get('development_config:development_config'));
-
-
+console.log(nconf.get('simple_config:entry'));
 ```
 
-After require `nconfetti` the backend will be added as storage backend
-for `nconf`. Then it needs to be configired with `path`and `env`.
+## Try a sample
 
-The backend support dereferencing of JSON pointers with a synchron usage
+- see samples/simple.js
+- run it with
+  - npm install
+  - node samples/simple.js
+ - have fun
+
+## Description
+
+After requiring `nconfetti` its storage will automagically be registered to `nconf`.
+Then it needs to be configured with `path`and `env`.
+
+The backend support dereferencing of JSON pointers with a synchronous usage
 of [json-schema-deref](https://www.npmjs.com/package/json-schema-deref)
 
 ## Config parameter
