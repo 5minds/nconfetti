@@ -43,9 +43,8 @@
     "lib/"
   ],
   "dependencies": {
-    "deasync": "^0.1.8",
     "handlebars": "^4.0.6",
-    "json-schema-deref": "^0.3.5",
+    "json-schema-deref-sync": "^0.5.0",
     "nconf": "^0.8.4"
   },
   "devDependencies": {
